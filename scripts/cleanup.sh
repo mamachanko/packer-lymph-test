@@ -1,10 +1,7 @@
 #!/bin/bash -eux
 
-# Uninstall Ansible and remove PPA.
-apt-get -y remove --purge ansible
-apt-add-repository --remove ppa:ansible/ansible
-apt-get autoremove
-apt-get update
+# Uninstall Ansible
+pip uninstall -y ansible
 
 # Delete unneeded files.
 rm -f /home/vagrant/*.sh
