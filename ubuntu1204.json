@@ -97,8 +97,18 @@
   ],
   "post-processors": [
     {
-      "output": "builds/{{.Provider}}-ubuntu1204.box",
-      "type": "vagrant"
+      "type": "vagrant",
+      "output": "builds/{{.Provider}}-ubuntu1204.box"
+    },
+    {
+      "type": "atlas",
+      "only": ["virtualbox-iso"],
+      "artifact": "mamachanko/lymph-test",
+      "artifact_type": "vagrant.box",
+      "metadata": {
+        "provider": "virtualbox",
+        "created_at": "{{timestamp}}"
+      }
     }
   ]
 }
