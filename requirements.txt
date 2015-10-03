@@ -5,4 +5,3 @@ geerlingguy.java
 geerlingguy.elasticsearch
 geerlingguy.redis
 geerlingguy.nodejs
-TalLannder.ZooKeeper

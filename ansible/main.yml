@@ -10,16 +10,48 @@
     - geerlingguy.elasticsearch
     - geerlingguy.nginx
     - geerlingguy.nodejs
-    - geerlingguy.redis
-    - TalLannder.ZooKeeper
-    - nowait.rabbitmq
 
   tasks:
     - name: Ancillary tooling is present
-      apt: "name={{ item }} state=installed"
+      apt: name={{ item }}
+           state=installed
       with_items:
+        - build-essential
+        - python-dev
+        - python-virtualenv
+        - python-setuptools
+        - libpq-dev
+        - libssl-dev 
+        - libffi-dev 
+        - zookeeper
+        - zookeeperd
         - rabbitmq-server
+        - redis-server
         - git
         - wget
         - curl
         - vim
+        - gcc
+
+    - name: Pip is present
+      shell: curl https://bootstrap.pypa.io/get-pip.py | python
+
+    - name: Virtualenv is present
+      pip: name=virtualenv
+           extra_args='-I'
+
+    - name: Middleware is running
+      service: name={{ item }}
+               state=started
+               enabled=yes
+      with_items:
+        - redis-server
+        - zookeeper
+
+    - name: Hosts are present
+      lineinfile: dest=/etc/hosts
+                  line={{ item }}
+      with_items:
+        - "127.0.0.1 zk"
+        - "127.0.0.1 rabbitmq"
+        - "127.0.0.1 redis"
