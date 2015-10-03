@@ -8,9 +8,12 @@
     - geerlingguy.packer-debian
 
   tasks:
-    - apt: "name={{ item }} state=installed"
+    - name: Ancillary tooling is present
+      apt: "name={{ item }} state=installed"
       with_items:
         - git
         - wget
         - curl
         - vim
+        - httpie
+        - jq
