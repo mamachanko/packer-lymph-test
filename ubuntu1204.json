@@ -1,4 +1,13 @@
 {
+  "push": {
+    "name": "mamachanko/packer-lymph-test",
+    "vcs": false,
+    "exclude": [
+        ".git/*",
+        ".swp",
+        ".gitignore"
+    ]
+  },
   "provisioners": [
     {
       "type": "shell",
