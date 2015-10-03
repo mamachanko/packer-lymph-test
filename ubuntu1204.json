@@ -30,8 +30,7 @@
         "{{pwd}}/roles/geerlingguy.elasticsearch",
         "{{pwd}}/roles/geerlingguy.redis",
         "{{pwd}}/roles/geerlingguy.nodejs",
-        "{{pwd}}/roles/TalLannder.ZooKeeper",
-        "{{pwd}}/roles/nowait.rabbitmq"
+        "{{pwd}}/roles/TalLannder.ZooKeeper"
       ]
     },
     {

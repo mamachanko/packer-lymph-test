@@ -18,6 +18,7 @@
     - name: Ancillary tooling is present
       apt: "name={{ item }} state=installed"
       with_items:
+        - rabbitmq-server
         - git
         - wget
         - curl

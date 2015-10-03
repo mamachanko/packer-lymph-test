@@ -6,4 +6,3 @@ geerlingguy.elasticsearch
 geerlingguy.redis
 geerlingguy.nodejs
 TalLannder.ZooKeeper
-nowait.rabbitmq
