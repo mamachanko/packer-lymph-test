@@ -6,6 +6,13 @@
   roles:
     - geerlingguy.nfs
     - geerlingguy.packer-debian
+    - geerlingguy.java
+    - geerlingguy.elasticsearch
+    - geerlingguy.nginx
+    - geerlingguy.nodejs
+    - geerlingguy.redis
+    - TalLannder.ZooKeeper
+    - nowait.rabbitmq
 
   tasks:
     - name: Ancillary tooling is present

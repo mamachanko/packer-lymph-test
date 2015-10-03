@@ -24,7 +24,14 @@
       "playbook_file": "ansible/main.yml",
       "role_paths": [
         "{{pwd}}/roles/geerlingguy.packer-debian",
-        "{{pwd}}/roles/geerlingguy.nfs"
+        "{{pwd}}/roles/geerlingguy.nfs",
+        "{{pwd}}/roles/geerlingguy.nginx",
+        "{{pwd}}/roles/geerlingguy.java",
+        "{{pwd}}/roles/geerlingguy.elasticsearch",
+        "{{pwd}}/roles/geerlingguy.redis",
+        "{{pwd}}/roles/geerlingguy.nodejs",
+        "{{pwd}}/roles/TalLannder.ZooKeeper",
+        "{{pwd}}/roles/nowait.rabbitmq"
       ]
     },
     {

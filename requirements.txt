@@ -1,2 +1,9 @@
 geerlingguy.packer-debian
 geerlingguy.nfs
+geerlingguy.nginx
+geerlingguy.java
+geerlingguy.elasticsearch
+geerlingguy.redis
+geerlingguy.nodejs
+TalLannder.ZooKeeper
+nowait.rabbitmq
