@@ -70,11 +70,11 @@
       "headless": true,
       "http_directory": "http",
       "iso_urls": [
-        "iso/ubuntu-12.04.5-server-amd64.iso",
-        "http://releases.ubuntu.com/12.04/ubuntu-12.04.5-server-amd64.iso"
+        "iso/ubuntu-15.04-server-amd64.iso",
+        "http://releases.ubuntu.com/vivid/ubuntu-15.04-server-amd64.iso"
       ],
       "iso_checksum_type": "md5",
-      "iso_checksum": "769474248a3897f4865817446f9a4a53",
+      "iso_checksum": "487f4a81f22f8597503db3d51a1b502e",
       "ssh_username": "vagrant",
       "ssh_password": "vagrant",
       "ssh_port": 22,
@@ -82,7 +82,7 @@
       "shutdown_command": "echo 'vagrant'|sudo -S shutdown -P now",
       "guest_additions_path": "VBoxGuestAdditions_{{.Version}}.iso",
       "virtualbox_version_file": ".vbox_version",
-      "vm_name": "packer-ubuntu-12.04-amd64",
+      "vm_name": "packer-ubuntu-15.04-amd64",
       "vboxmanage": [
         [
           "modifyvm",
@@ -102,7 +102,7 @@
   "post-processors": [
     {
       "type": "vagrant",
-      "output": "builds/{{.Provider}}-ubuntu1204.box"
+      "output": "builds/{{.Provider}}-ubuntu1504.box"
     },
     {
       "type": "atlas",
